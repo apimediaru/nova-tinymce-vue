@@ -1,6 +1,6 @@
 {
   "name": "@apimediaru/tinymce-vue",
-  "version": "3.2.8",
+  "version": "3.2.9",
   "description": "Forked official TinyMCE Vue Component",
   "private": false,
   "repository": {
