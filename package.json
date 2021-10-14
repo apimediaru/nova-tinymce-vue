@@ -1,5 +1,5 @@
 {
-  "name": "@apimediaru/tinymce-vue",
+  "name": "@apimediaru/nova-tinymce-vue",
   "version": "3.2.10",
   "description": "Forked official TinyMCE Vue Component",
   "private": false,
