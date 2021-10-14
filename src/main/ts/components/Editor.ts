@@ -73,7 +73,7 @@ const initialise = (ctx: IEditor) => () => {
   } else if (typeof initDelay === 'number') {
     window.setTimeout(() => {
       getTinymce().init(finalInit);
-    });
+    }, initDelay);
   } else {
     getTinymce().init(finalInit);
   }
