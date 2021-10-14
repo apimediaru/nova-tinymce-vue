@@ -23,6 +23,7 @@ export interface IPropTypes {
   value: string;
   disabled: boolean;
   tinymceScriptSrc: string;
+  initDelay: boolean | number;
 }
 
 export const editorProps: CopyProps<IPropTypes> = {
@@ -43,4 +44,5 @@ export const editorProps: CopyProps<IPropTypes> = {
     type: String,
     validator: (prop: string) => prop === 'html' || prop === 'text'
   },
+  initDelay: [Boolean, Number],
 };

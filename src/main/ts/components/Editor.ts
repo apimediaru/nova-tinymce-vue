@@ -65,7 +65,18 @@ const initialise = (ctx: IEditor) => () => {
     ctx.element.style.display = '';
   }
 
-  getTinymce().init(finalInit);
+  const { initDelay } = ctx.$props;
+  if (initDelay === true) {
+    ctx.$nextTick(() => {
+      getTinymce().init(finalInit);
+    });
+  } else if (typeof initDelay === 'number') {
+    window.setTimeout(() => {
+      getTinymce().init(finalInit);
+    });
+  } else {
+    getTinymce().init(finalInit);
+  }
 };
 
 export const Editor: ThisTypedComponentOptionsWithRecordProps<Vue, {}, {}, {}, IPropTypes> = {
